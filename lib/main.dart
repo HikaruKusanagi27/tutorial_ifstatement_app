@@ -41,6 +41,39 @@ class _MainAppState extends State<MainApp> {
                     ),
                   ),
                 )
+              else if (number >= 11 && number <= 20)
+                // より大きいか等しい」という意味です
+                // 左側の値が右側の値より大きいか、または等しい場合に真になります
+                // 例：11 >= 11 は真（true）です
+                // 例：12 >= 11 は真（true）です
+                // 例：10 >= 11 は偽（false）です
+
+                // &&（論理AND演算子）：
+                // 「かつ」という意味です
+                // 両側の条件が両方とも真（true）の場合にのみ、全体が真になります
+                // 例：A && B は、AとBの両方が真の時だけ真になります
+
+                // 「より小さいか等しい」という意味です
+                // 左側の値が右側の値より小さいか、または等しい場合に真になります
+                // 例：20 <= 20 は真（true）です
+                // 例：19 <= 20 は真（true）です
+                // 例：21 <= 20 は偽（false）です
+                Card(
+                  color: Colors.blue,
+                  child: SizedBox(
+                    width: 300,
+                    height: 300,
+                    child: Center(
+                      child: Text(
+                        '$number', // 1から100までの数字
+                        style: const TextStyle(
+                          fontSize: 50,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ),
+                )
               else
                 Card(
                   color: Colors.white,
